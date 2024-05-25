@@ -9,3 +9,7 @@ jobs:
 
       - name: Install Prettier
         run: npm install prettier
+
+      - name: Output Github context
+        run: echo "${{toJSON(github)}}"
+
