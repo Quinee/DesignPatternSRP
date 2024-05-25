@@ -12,4 +12,10 @@ jobs:
 
       - name: Output Github context
         run: echo "${{toJSON(github)}}"
-
+  deploy:
+    needs:
+      [testing]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy start
+        run: echo "HW"
