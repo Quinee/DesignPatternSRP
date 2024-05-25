@@ -1,0 +1,11 @@
+name: Prettier test
+on: push
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Prettier
+        run: npm install prettier-plugin-java
+
+      - name: Install Prettier
+        run: npm install prettier
