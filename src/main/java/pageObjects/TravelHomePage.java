@@ -8,15 +8,17 @@ import pageComponents.NavigationBar;
 
 public class TravelHomePage {
     By sectionElement = By.id("traveller-home");
+    By footerNavSectionElement=By.id("buttons");
     WebDriver driver;
-    SearchFlightAvail searchFlightAvail;
+    //SearchFlightAvail searchFlightAvail;
 
     public TravelHomePage(WebDriver driver) {
         this.driver = driver;
     }
 
     public NavigationBar getNavigationBar(){
-        return new NavigationBar();
+
+        return new NavigationBar(driver,footerNavSectionElement);
     }
 
     public FooterNav getFooterNav(){
@@ -26,12 +28,12 @@ public class TravelHomePage {
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
     }
 
-    public void setBookingStrategy(SearchFlightAvail setTripDetails){
-        searchFlightAvail = setTripDetails;
-    }
-
-    public void checkAvailAsPerSetStrategy(String origin, String destination){
-        searchFlightAvail.checkAvail(origin,destination);
-    }
+//    public void setBookingStrategy(SearchFlightAvail setTripDetails){
+//        this.searchFlightAvail = setTripDetails;
+//    }
+//
+//    public void checkAvailAsPerSetStrategy(String origin, String destination){
+//        searchFlightAvail.checkAvail(origin,destination);
+//    }
 
 }
